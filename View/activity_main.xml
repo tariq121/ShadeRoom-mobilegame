@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="700dp" android:layout_width="420dp">
+
+    <Button
+        android:id="@+id/Easy"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/custom_button_easy"
+        android:text="Too Easy"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:onClick="switchToEasy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <Button
+        android:id="@+id/Hard"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="280dp"
+        android:text="Freaking Insane"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:onClick="switchToHard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Medium"
+        android:background="@drawable/custom_button_hard"
+        app:layout_constraintVertical_bias="0.0" android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/High_Score"
+        android:layout_width="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="80dp"
+        android:text="High Score"
+        android:onClick="switchToScore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hard"
+        android:background="@color/darkblue"
+        android:textColor="@color/lightblue"
+        app:layout_constraintVertical_bias="0.06" android:textSize="20sp"/>
+
+
+    //might need to make transitionVisibilityMode for below
+    // change android:toYScale="9.0" number to increase height bounced
+
+    <Button
+        android:id="@+id/Medium"
+        android:layout_marginTop="20dp"
+
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:text="In Between"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="switchToMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Easy"
+        android:background="@drawable/custom_button_meium"
+        app:layout_constraintVertical_bias="0.0" android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/yellowSquare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/darkblueSquare"
+        app:layout_constraintEnd_toStartOf="@+id/redSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@color/yellow"
+        app:tint="@color/yellow"/>
+
+    <ImageView
+        android:id="@+id/redSquare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yellowSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@color/red"
+        app:tint="@color/red"
+        />
+
+    <ImageView
+        android:id="@+id/orangeSquare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/greenSquare"
+        app:layout_constraintEnd_toStartOf="@+id/darkblueSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@color/orange"
+        app:tint="@color/orange"/>
+
+    <ImageView
+        android:id="@+id/greenSquare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/orangeSquare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple"
+        app:tint="@color/green"
+        android:background="@color/green"/>
+
+    <ImageView
+        android:id="@+id/darkblueSquare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+
+        app:layout_constraintStart_toEndOf="@+id/orangeSquare"
+        app:layout_constraintEnd_toStartOf="@+id/yellowSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@color/darkblue"
+        app:tint="@color/darkblue"/>
+
+    <EditText
+        android:id="@+id/The_Shade_Room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="THE SHADE ROOM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
